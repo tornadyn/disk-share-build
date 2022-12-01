@@ -1,0 +1,8 @@
+FROM rockylinux/rockylinux
+
+RUN dnf update -y
+RUN dnf install httpd -y
+RUN mkdir /data
+RUN echo "Welcom to my Linux." > /data/greeting
+
+VOLUME /data
